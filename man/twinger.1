@@ -1,0 +1,56 @@
+.\" This manual page was originally written by Jan Schaumann
+.\" <jschauma@netmeister.org> in October 2012, because Jan actually thinks
+.\" that even silly little tools like these deserve a fine manual page.
+.Dd October 8, 2012
+.Dt TWINGER 1
+.Os
+.Sh NAME
+.Nm twinger
+.Nd twitter user information lookup program
+.Sh SYNOPSIS
+.Nm
+.Ar user
+.Sh DESCRIPTION
+The
+.Nm
+utility displays information about the given twitter user.
+.Sh DETAILS
+In the days when we had to walk uphill (both ways!) through the snow to
+the server room in order to reboot our servers, there existed the
+.Xr finger 1
+tool, able to display some information about users on a local or remote
+system.
+.Pp
+In some ways, Twitter accounts have replaced users' central online
+(pseudo-) identity; a Twitter user's description thus lends itself to be
+displayed in the same manner.
+.Sh OUTPUT FORMAT
+By default,
+.Nm
+will generate output in a single line per user format with a descriptive
+header, showing the following fields:
+.Bl -tag -width real_name_
+.It User
+The given user's username.
+.It Real Name
+The real name as given on Twitter.
+.It What
+The short description provided by the user on Twitter.
+.El
+.Sh EXIT STATUS
+.Ex -std
+.Sh SEE ALSO
+.Xr finger 1
+.Sh HISTORY
+.Nm
+was originally written by
+.An James Turnbull
+.Aq kartar@
+in October 2012.
+.Pp
+This manual page was written by
+.An Jan Schaumann
+.Aq jschauma@ .
+.Sh BUGS
+Please file bugs, feature and pull requests on GitHub at:
+.Xr https://github.com/jamtur01/twinger

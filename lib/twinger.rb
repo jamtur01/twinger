@@ -6,11 +6,13 @@ class Twinger
     output = JSON.parse(Net::HTTP.get 'api.twitter.com', "/1/users/show.json?screen_name=#{user}")
     if output.has_key?("errors")
       puts "The Twitter user doesn't exist or an error has occured."
+      exit(1)
     else
       finger = "[#{output['screen_name']}@twitter.com]\n" \
              "User\tReal Name\tWhat\n" \
              "#{output['screen_name']}\t#{output['name']}\t#{output['description']}\n"
       puts finger
+      exit(0)
     end
   end
 end
