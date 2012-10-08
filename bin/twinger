@@ -21,7 +21,7 @@ require 'rubygems'
 require 'twinger'
 
 if ARGV.empty? 
-  puts "You must specify a Twitter username"
+  puts "You must specify a Twitter username."
   exit(1)
 end
 
